@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>archetype</id>
+            <username>[developer username]</username>
+            <password>[developer password]</password>
+        </server>
+        <server>
+            <id>maven-public</id>
+            <username>[developer username]</username>
+            <password>[developer password]</password>
+        </server>
+        <server>
+            <id>erep-docker.dev.utah.gov</id>
+            <username>[developer username]</username>
+            <password>[developer password]</password>
+        </server>
+        <server>
+            <id>docker</id>
+            <username>[developer username]</username>
+            <password>[developer password]</password>
+            <configuration>
+                <email>[developer email address]</email>
+            </configuration>
+        </server>
+    </servers>
+    <mirrors>
+        <mirror>
+            <id>maven-public</id>
+            <mirrorOf>*</mirrorOf>
+            <url>https://erep-maven.dev.utah.gov/repository/maven-public/</url>
+            <name>erep-nexus</name>
+        </mirror>
+    </mirrors>
+    <profiles>
+        <profile>
+            <id>profile-alm-deploy</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>localhost</url>
+                </repository>
+                <repository>
+                    <id>maven-releases</id>
+                    <name>Maven Releases</name>
+                    <releases>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>never</updatePolicy>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>always</updatePolicy>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <url>https://erep-maven.dev.utah.gov/repository/maven-releases</url>
+                </repository>
+                <repository>
+                    <id>maven-snapshots</id>
+                    <name>Maven Snapshots</name>
+                    <releases>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>never</updatePolicy>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>always</updatePolicy>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <url>https://erep-maven.dev.utah.gov/repository/maven-snapshots</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>localhost</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>maven-releases</id>
+                    <name>Maven Releases</name>
+                    <releases>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>never</updatePolicy>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>always</updatePolicy>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <url>https://erep-maven.dev.utah.gov/repository/maven-releases</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>maven-snapshots</id>
+                    <name>Maven Snapshots</name>
+                    <releases>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>never</updatePolicy>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <checksumPolicy>fail</checksumPolicy>
+                        <updatePolicy>always</updatePolicy>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <url>https://erep-maven.dev.utah.gov/repository/maven-snapshots</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>

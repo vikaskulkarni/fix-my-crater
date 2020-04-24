@@ -1,0 +1,54 @@
+.wrapper {
+  overflow-y: scroll;
+  display: flex;
+  margin: 0;
+  padding: 15px;
+
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+}
+
+.content {
+  position: relative !important;
+  height: 75% !important;
+}
+
+.header {
+  padding: 0 25px;
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+.map-container-6 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.details {
+  padding: 15px;
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  .photoStrip {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+
+    img {
+      margin: 0 2px;
+    }
+  }
+}

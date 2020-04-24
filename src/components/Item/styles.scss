@@ -1,0 +1,11 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #c1c1c1;
+  padding: 10px;
+  text-decoration: none;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

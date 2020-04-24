@@ -1,0 +1,53 @@
+:required {
+  background: url(https://cdn0.iconfinder.com/data/icons/fugue/icon/asterisk-small.png)
+    no-repeat;
+  background-position: right top;
+}
+
+.left-radius {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.right-radius {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #333;
+  height: 10px;
+  vertical-align: middle;
+  outline: none;
+}
+
+.rangeCls-0 {
+  background-color: #ffcccc;
+}
+.rangeCls-1 {
+  background-color: #ff9999;
+}
+.rangeCls-2 {
+  background-color: #ff6666;
+}
+.rangeCls-3 {
+  background-color: #ff3333;
+}
+.rangeCls-4 {
+  background-color: #ff0000;
+}
+.rangeCls-5 {
+  background-color: #cc0000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px rgba(000, 000, 000, 0.5);
+  border: 1px solid #999;
+  height: 20px;
+  width: 20px;
+}
